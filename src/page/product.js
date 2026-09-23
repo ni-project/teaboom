@@ -66,9 +66,13 @@ export class Product {
   }
 
   renderCost = (product) => {
-    const PRICE_OLD = product.price.old ? `<span>${product.price.old} ₽</span>` : '';
+    const COST_FORMATTED = new Intl.NumberFormat('ru-RU', {
+      style: 'currency',
+      currency: 'RUB'
+    });
+    const PRICE_OLD = product.price.old ? `<span>${COST_FORMATTED.format(product.price.old)}</span>` : '';
 
-    return `${product.price.current} ₽ ${PRICE_OLD}`;
+    return `${COST_FORMATTED.format(product.price.current)} ${PRICE_OLD}`;
   }
 
   renderStock = (product) => {
