@@ -1,0 +1,5 @@
+@use "@styles/tools" as *;
+
+footer {
+  @include full-width(block);
+}

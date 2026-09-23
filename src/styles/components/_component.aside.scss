@@ -1,0 +1,16 @@
+@use "@styles/settings" as *;
+@use "@styles/tools" as *;
+
+.aside {
+  @include full-width(flex);
+
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: rgb(246, 246, 246);
+
+  @media (max-width: $screenTabletLandscape) {
+    min-height: 96px;
+    height: auto;
+  }
+}

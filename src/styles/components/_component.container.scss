@@ -1,0 +1,14 @@
+@use "@styles/settings" as *;
+@use "@styles/tools" as *;
+
+.container {
+  @include full-width(block);
+
+  max-width: calc(#{$siteContentWidth} + #{$desktopContentPadding * 2});
+  margin: 0 auto;
+  padding: 0 $desktopContentPadding;
+
+  @media (max-width: $screenMobile) {
+    padding: 0 $mobileContentPadding;
+  }
+}

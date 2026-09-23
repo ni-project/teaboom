@@ -1,0 +1,14 @@
+@use "@styles/settings" as *;
+@use "@styles/tools" as *;
+
+.header-nav {
+  @include full-width(flex);
+
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin-top: $siteHeaderHeightDesktop;
+  background: $white;
+  text-align: center;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}

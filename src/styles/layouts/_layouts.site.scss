@@ -1,0 +1,50 @@
+@use "@styles/settings" as *;
+@use "@styles/tools" as *;
+
+.app {
+  @include full-wh(flex);
+
+  flex-direction: column;
+
+  &__content {
+    @include full-width(flex);
+
+    column-gap: 32px;
+    flex: 1;
+    max-width: calc(#{$siteContentWidth} + #{$desktopContentPadding * 2});
+    margin: 0 auto;
+    padding: 32px $desktopContentPadding;
+
+    main {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      row-gap: 32px;
+    }
+
+    aside {
+      width: 270px;
+    }
+
+    @media (max-width: $screenTabletLandscape) {
+      flex-direction: column;
+      row-gap: 32px;
+
+      aside {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: $screenTabletPortrait) {
+      padding: 24px $desktopContentPadding;
+    }
+
+    @media (max-width: $screenMobile) {
+      padding: 24px $mobileContentPadding;
+
+      main {
+        row-gap: 24px;
+      }
+    }
+  }
+}

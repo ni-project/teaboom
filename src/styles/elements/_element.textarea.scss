@@ -1,0 +1,11 @@
+
+textarea {
+  display: block;
+  width: 100% !important;
+  min-width: 100%;
+  max-width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}

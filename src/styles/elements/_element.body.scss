@@ -1,0 +1,14 @@
+@use "@styles/settings" as *;
+@use "@styles/tools" as *;
+
+body {
+  @include full-wh(block);
+  @include font(14px, 24px, $primary, 400);
+
+  font-family: $FONT_GLOBAL;
+  background: {
+    color: rgb(251, 251, 251);
+    image: url("@images/app/background.png");
+  }
+  -webkit-tap-highlight-color: transparent;
+}

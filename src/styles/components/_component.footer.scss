@@ -1,0 +1,12 @@
+@use "@styles/settings" as *;
+@use "@styles/tools" as *;
+
+.footer {
+  @include full-width(block);
+
+  padding: 100px 0;
+  background: rgb(254, 252, 239);
+  text-align: center;
+  border-top: 1px solid $gray;
+}
+

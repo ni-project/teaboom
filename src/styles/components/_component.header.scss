@@ -1,0 +1,16 @@
+@use "@styles/settings" as *;
+@use "@styles/tools" as *;
+
+.header {
+  @include full-width(flex);
+
+  align-items: center;
+  justify-content: center;
+  height: $siteHeaderHeightDesktop;
+  background: rgb(254, 252, 239); // background-color: rgb(246, 247, 248);
+  text-align: center;
+  border-bottom: 1px solid $gray;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+}

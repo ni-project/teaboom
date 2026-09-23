@@ -1,0 +1,14 @@
+@use "@styles/settings" as *;
+
+:root {
+  // HEADER HEIGHT
+  --header-height: #{$siteHeaderHeightDesktop};
+
+  @media (max-width: $screenTabletLandscape) {
+    --header-height: #{$siteHeaderHeightTablet};
+  }
+
+  @media (max-width: $screenMobile) {
+    --header-height: #{$siteHeaderHeightMobile};
+  }
+}

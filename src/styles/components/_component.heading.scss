@@ -1,0 +1,29 @@
+@use "@styles/settings" as *;
+@use "@styles/tools" as *;
+
+.heading {
+  @include full-width(block);
+
+  h1 {
+    @include font(32px, 42px, $H_FONT_COLOR, 700);
+  }
+
+  h2 {}
+
+  h3 {}
+
+  h4 {
+    @include font(18px, 26px, $H_FONT_COLOR, 700);
+  }
+
+  h5 {}
+
+  h6 {}
+
+  @media (max-width: $screenMobile) {
+    h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/* Фикс из-за сборщика Vite */
+.curtain {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: 1;
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5000;
+}
+
+.curtain.hide {
+    animation: 0.3s AnimationCurtainHide 0.4s ease-in-out both;
+}
+
+@keyframes AnimationCurtainHide {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
